@@ -47,7 +47,17 @@ body, html {
 }
 .nav-link {
     color: aliceblue;
+    border-bottom: 0px solid white;
+
 }
+
+.nav-link:hover {
+    color: aliceblue;
+    border-bottom: 1px solid white;
+
+}
+
+
 
 .top-center-caption {
     top: 0;
