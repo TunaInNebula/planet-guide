@@ -78,6 +78,7 @@ body, html {
 .top-left-caption {
     top: 50%;
     left: 0;
+    right: 50%;
     transform: translate(0, 0);
     text-align: left;
     background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for better visibility */
@@ -87,9 +88,10 @@ body, html {
 .top-right-caption {
     top: 50%;
     right: 0;
+    left: 50%;
     transform: translate(0, 0);
     text-align: right;
-    background-color: rgba(0, 0, 0, 0); /* Optional: Add a background color for better visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for better visibility */
     padding: 10px; /* Optional: Add some padding */
 }
 
@@ -101,4 +103,39 @@ body, html {
     margin-top: 50px;
 }
 
+
+/* Görünmezden görünürlüğe geçiş animasyonu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        margin-top: 400px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 30px;
+    }
+}
+
+/* Animasyonun başlangıç durumu */
+.top-left-caption {
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 2s ease-in; /* 2 saniyelik geçiş */
+}
+
+/* JavaScript ile bu sınıf eklenecek */
+.top-left-caption {
+    opacity: 1; /* Görünür hale gelir */
+    animation: fadeIn 2s forwards; /* 2 saniyelik bir animasyonla görünür hale gelir */
+}
+
+.top-right-caption {
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 2s ease-in; /* 2 saniyelik geçiş */
+}
+
+/* JavaScript ile bu sınıf eklenecek */
+.top-right-caption {
+    opacity: 1; /* Görünür hale gelir */
+    animation: fadeIn 2s forwards; /* 2 saniyelik bir animasyonla görünür hale gelir */
+}
 
