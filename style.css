@@ -1,0 +1,94 @@
+@font-face {
+    font-family: myFont;
+    src: url(absender1.ttf);
+}
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container-wrapper {
+    position: relative;
+    width: 100%;
+    height: calc(100% - 56px); /* 56px is the height of the navbar */
+    overflow: hidden;
+    top: 56px; /* To ensure it starts below the navbar */
+}
+
+.container-slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
+    background-repeat: no-repeat;
+    background-size: contain; /
+}
+
+.active-slide {
+    transform: translateX(0) !important;
+}
+
+.hidden-slide {
+    transform: translateX(100%) !important;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0);
+}
+.nav-link {
+    color: aliceblue;
+}
+
+.top-center-caption {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.164); /* Optional: Add a background color for better visibility */
+    width: 100%;
+    padding: 10px; /* Optional: Add some padding */
+    position: absolute; /* Make sure it is positioned absolutely within the carousel item */
+    margin-top: 30px;
+    font-size: 48px;
+
+}
+
+
+
+.top-left-caption {
+    top: 50%;
+    left: 0;
+    transform: translate(0, 0);
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a background color for better visibility */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+.top-right-caption {
+    top: 50%;
+    right: 0;
+    transform: translate(0, 0);
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0); /* Optional: Add a background color for better visibility */
+    padding: 10px; /* Optional: Add some padding */
+}
+
+.top-left-caption .captiondetail {
+    margin-top: 50px;
+}
+
+.top-right-caption .captiondetail {
+    margin-top: 50px;
+}
+
+
